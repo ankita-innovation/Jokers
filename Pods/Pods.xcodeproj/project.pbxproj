@@ -3697,7 +3697,7 @@
 		1B8064BE54CB3ADA92AC072B5E049DB9 /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = FirebaseCore/Internal/Sources/HeartbeatLogging/Storage.swift; sourceTree = "<group>"; };
 		1BA030F387ECA6635F1A02D729BAF39F /* FBLPromise+Await.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Await.h"; path = "Sources/FBLPromises/include/FBLPromise+Await.h"; sourceTree = "<group>"; };
 		1BF8C76C02E9CBC49ADA3FEABA87EB5D /* FIRSignInWithGameCenterRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRSignInWithGameCenterRequest.h; path = FirebaseAuth/Sources/Backend/RPC/FIRSignInWithGameCenterRequest.h; sourceTree = "<group>"; };
-		1C581F7F26BABCF5C6595E015AF7E86A /* PredictOnDeviceResource.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PredictOnDeviceResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C581F7F26BABCF5C6595E015AF7E86A /* MLKitSmartReply-PredictOnDeviceResource */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "MLKitSmartReply-PredictOnDeviceResource"; path = PredictOnDeviceResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C6E87BCBD63A1F9ACF57BD2C1F75C4E /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sk.lproj; path = FirebaseAuthUI/Sources/Strings/sk.lproj; sourceTree = "<group>"; };
 		1C8627AE041C102988520F6E1E6EF99E /* MarqueeLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MarqueeLabel.modulemap; sourceTree = "<group>"; };
 		1CAC7E3D1DBDFC29BC06C57A8E896686 /* es-PA.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "es-PA.lproj"; path = "FirebasePhoneAuthUI/Sources/Strings/es-PA.lproj"; sourceTree = "<group>"; };
@@ -3772,7 +3772,7 @@
 		23DE82E764EB93155E2E236B72101EFA /* FIRCLSThreadArrayOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRCLSThreadArrayOperation.m; path = Crashlytics/Crashlytics/Operations/Symbolication/FIRCLSThreadArrayOperation.m; sourceTree = "<group>"; };
 		23F8E14B6EFCB98E1E945AB36F6CD397 /* FIRDynamicLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRDynamicLink.h; path = FirebaseDynamicLinks/Sources/Public/FirebaseDynamicLinks/FIRDynamicLink.h; sourceTree = "<group>"; };
 		2424666F462606B8F98E8ED9B2AACF38 /* BBMetalLuminosityBlendFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBMetalLuminosityBlendFilter.swift; path = BBMetalImage/BBMetalImage/BBMetalLuminosityBlendFilter.swift; sourceTree = "<group>"; };
-		242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ActiveLabel; path = ActiveLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActiveLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2427FF433BE42D3D95772A1DC0CFAABC /* FIRUserMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRUserMetadata.h; path = FirebaseAuth/Sources/Public/FirebaseAuth/FIRUserMetadata.h; sourceTree = "<group>"; };
 		2438B81EC24DB9FF4F324D4CD9D9D294 /* FIRSendVerificationCodeResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRSendVerificationCodeResponse.h; path = FirebaseAuth/Sources/Backend/RPC/FIRSendVerificationCodeResponse.h; sourceTree = "<group>"; };
 		24401119CEC7CAF96F5333B388EC2B3B /* Optional+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Optional+Extension.swift"; path = "Source/Shared/Library/Optional+Extension.swift"; sourceTree = "<group>"; };
@@ -4366,7 +4366,7 @@
 		5D35F7D8B1970DF729135A59C8C9F576 /* SDWebImageDownloaderDecryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderDecryptor.m; path = SDWebImage/Core/SDWebImageDownloaderDecryptor.m; sourceTree = "<group>"; };
 		5D45C44263FF73EB5446B02A97A80B25 /* FIRCoreDiagnosticsConnector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCoreDiagnosticsConnector.h; path = FirebaseCore/Extension/FIRCoreDiagnosticsConnector.h; sourceTree = "<group>"; };
 		5D623F5696FEC78E66FBDF447A081F2C /* SDImageCachesManagerOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManagerOperation.m; path = SDWebImage/Private/SDImageCachesManagerOperation.m; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7FCC29A52555A1936CD034D5B2D326 /* MXSegmentedControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MXSegmentedControl.debug.xcconfig; sourceTree = "<group>"; };
 		5D85D9C76F2155E2BD319C5B517EF71D /* LOTShapeGradientFill.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LOTShapeGradientFill.m; path = "lottie-ios/Classes/Models/LOTShapeGradientFill.m"; sourceTree = "<group>"; };
 		5DA561E086FF3136546036F9E0E98BC6 /* BBMetalImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BBMetalImage.debug.xcconfig; sourceTree = "<group>"; };
@@ -4664,7 +4664,7 @@
 		7AABA696AE53C6355F2A9C25AA0ACE7C /* GCDWebServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDWebServer.m; path = GCDWebServer/Core/GCDWebServer.m; sourceTree = "<group>"; };
 		7ACE43CD803629A6A19984BA14716CFD /* lossless_enc_sse2.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = lossless_enc_sse2.c; path = src/dsp/lossless_enc_sse2.c; sourceTree = "<group>"; };
 		7AD1A0CEBAA234CF54CBDD6C40353285 /* GULNetworkURLSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkURLSession.m; path = GoogleUtilities/Network/GULNetworkURLSession.m; sourceTree = "<group>"; };
-		7AD67EFB9A7864151301DC2890207AA2 /* SwiftyGif */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyGif; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AD67EFB9A7864151301DC2890207AA2 /* SwiftyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD8D8FE9B4157EDCA551682985E7029 /* GTMSessionFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcher.h; path = Source/GTMSessionFetcher.h; sourceTree = "<group>"; };
 		7ADACF43F437DA8B76AE5A9A3FBCBBDE /* GTMStringEncoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMStringEncoding.m; path = Foundation/GTMStringEncoding.m; sourceTree = "<group>"; };
 		7AE847149B246815456894372874E328 /* FLAnimatedImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.debug.xcconfig; sourceTree = "<group>"; };
@@ -5056,7 +5056,7 @@
 		A15AFE9ADE66E4E785CD37D5ABB6BE74 /* PromisesObjC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromisesObjC-umbrella.h"; sourceTree = "<group>"; };
 		A17D8FBDFA95FC20765A27BF694B7147 /* SocketIOClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClient.swift; path = Source/SocketIO/Client/SocketIOClient.swift; sourceTree = "<group>"; };
 		A19A7B69ABA8F6ADD30DCDE83CE93793 /* FIRStartMFASignInRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRStartMFASignInRequest.h; path = FirebaseAuth/Sources/Backend/RPC/MultiFactor/SignIn/FIRStartMFASignInRequest.h; sourceTree = "<group>"; };
-		A1B9F27862201CD82B398E0B35B14128 /* NVActivityIndicatorView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NVActivityIndicatorView; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B9F27862201CD82B398E0B35B14128 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NVActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C579A25889653EA6583523D0DF041C /* FUIStaticContentTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FUIStaticContentTableViewController.h; path = FirebaseAuthUI/Sources/FUIStaticContentTableViewController.h; sourceTree = "<group>"; };
 		A1FCC668F63F964B2C3245F33858165E /* FIRAuthTokenResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthTokenResult.h; path = FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthTokenResult.h; sourceTree = "<group>"; };
 		A25543A669F9B733CA67DA01FBA50EF2 /* FIRComponentContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentContainer.h; path = FirebaseCore/Extension/FIRComponentContainer.h; sourceTree = "<group>"; };
@@ -5126,7 +5126,7 @@
 		A8B14C0E3703E3D2A69A7E922BC58D42 /* UIBezierPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIBezierPath.m; path = "lottie-ios/Classes/MacCompatibility/UIBezierPath.m"; sourceTree = "<group>"; };
 		A8B1FBBB63A402278A38FE88FA870408 /* GoogleUtilitiesComponents-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleUtilitiesComponents-Info.plist"; sourceTree = "<group>"; };
 		A8C6FE39D45119BBABA815E575CB0A4F /* dec.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = dec.c; path = src/dsp/dec.c; sourceTree = "<group>"; };
-		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManagerSwift; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F05ACB94824328E06990B71249732F /* SDDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDDiskCache.m; path = SDWebImage/Core/SDDiskCache.m; sourceTree = "<group>"; };
 		A8F0F4854B9CEA0A1F9E872C1181CD6D /* GTMLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMLogger.m; path = Foundation/GTMLogger.m; sourceTree = "<group>"; };
 		A8F10B6D36F663BA25CAFC7A21F2719E /* FIRMessagingContextManagerService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRMessagingContextManagerService.m; path = FirebaseMessaging/Sources/FIRMessagingContextManagerService.m; sourceTree = "<group>"; };
@@ -5254,7 +5254,7 @@
 		B6B62D04219E3BC8A7797BD8EA5225BE /* SDGraphicsImageRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDGraphicsImageRenderer.h; path = SDWebImage/Core/SDGraphicsImageRenderer.h; sourceTree = "<group>"; };
 		B6B87CC19D777D0E8CE7FF34F623B218 /* FirebaseCrashlytics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FirebaseCrashlytics.modulemap; sourceTree = "<group>"; };
 		B6FB8357982A3A496BBA4BB260AF4B66 /* ln.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ln.lproj; path = FirebaseAuthUI/Sources/Strings/ln.lproj; sourceTree = "<group>"; };
-		B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BBMetalImage; path = BBMetalImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BBMetalImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B716A11703E50FEBD8F247A9B13181D1 /* BBMetalBoxBlurFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBMetalBoxBlurFilter.swift; path = BBMetalImage/BBMetalImage/BBMetalBoxBlurFilter.swift; sourceTree = "<group>"; };
 		B718723CCE569AA0F08EC9A6F71146A2 /* FIRCLSDwarfUnwind.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = FIRCLSDwarfUnwind.c; path = Crashlytics/Crashlytics/Unwind/Dwarf/FIRCLSDwarfUnwind.c; sourceTree = "<group>"; };
 		B724D1E10504F208B85E84375D018766 /* GPBUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUtilities.h; path = objectivec/GPBUtilities.h; sourceTree = "<group>"; };
@@ -5430,7 +5430,7 @@
 		C70B0B78705CC354ED96D8EB0879258D /* ic_phone@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ic_phone@2x.png"; path = "FirebasePhoneAuthUI/Sources/Resources/ic_phone@2x.png"; sourceTree = "<group>"; };
 		C7314B77E023722B72036809D267C957 /* iRecordView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iRecordView.debug.xcconfig; sourceTree = "<group>"; };
 		C747E7B6AD0A4AD5CAD8922AA1EDFCF5 /* bit_reader_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bit_reader_utils.h; path = src/utils/bit_reader_utils.h; sourceTree = "<group>"; };
-		C76B29022B3B824D8D97E292CE9FE561 /* JTMaterialTransition */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JTMaterialTransition; path = JTMaterialTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C76B29022B3B824D8D97E292CE9FE561 /* JTMaterialTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTMaterialTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7989AC83BE41FB82D71A62CC43FCFE9 /* ThumbSelectorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThumbSelectorView.swift; path = Sources/PryntTrimmerView/ThumbSelectorView.swift; sourceTree = "<group>"; };
 		C7A0EDA0CBB3C0986AAF1A345A8AFBBF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		C7BC38AFA5F69A64F1D61E71939D6BC2 /* SDmetamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDmetamacros.h; path = SDWebImage/Private/SDmetamacros.h; sourceTree = "<group>"; };
@@ -5530,7 +5530,7 @@
 		D021B4C6710B528A7FE70E2CE02B3F9A /* FBLPromises.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromises.h; path = Sources/FBLPromises/include/FBLPromises.h; sourceTree = "<group>"; };
 		D0250680633C8F17EE97D53D8BB29B3E /* NVActivityIndicatorAnimationBallRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallRotate.swift; path = Sources/Base/Animations/NVActivityIndicatorAnimationBallRotate.swift; sourceTree = "<group>"; };
 		D02D211F4DEDF391754D05C5343A5C6B /* IQKeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManager.swift; path = IQKeyboardManagerSwift/IQKeyboardManager.swift; sourceTree = "<group>"; };
-		D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PryntTrimmerView; path = PryntTrimmerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PryntTrimmerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09F4101D3488B3B879203A38AEAE521 /* LOTStrokeRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LOTStrokeRenderer.h; path = "lottie-ios/Classes/RenderSystem/RenderNodes/LOTStrokeRenderer.h"; sourceTree = "<group>"; };
 		D0AE0BBD01E6D7EE04CC2C4556C9B836 /* GoogleAppMeasurement-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleAppMeasurement-xcframeworks.sh"; sourceTree = "<group>"; };
 		D0C016777E70A5E2CADD5949FDFD7067 /* FIRCLSMachException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCLSMachException.h; path = Crashlytics/Crashlytics/Handlers/FIRCLSMachException.h; sourceTree = "<group>"; };
@@ -5697,7 +5697,7 @@
 		E2102C6A2C70DDADDE7B9DDA9ADBEE95 /* DropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.release.xcconfig; sourceTree = "<group>"; };
 		E213C0E66C3D28226C6E370762A83D8F /* FIRVerifyAssertionRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRVerifyAssertionRequest.m; path = FirebaseAuth/Sources/Backend/RPC/FIRVerifyAssertionRequest.m; sourceTree = "<group>"; };
 		E229EE30D8E7EE2578C307B82F782591 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = FirebasePhoneAuthUI/Sources/Strings/ru.lproj; sourceTree = "<group>"; };
-		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A54477C340DD55C5995F85C03E4198 /* FIRAuthBackend.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthBackend.h; path = FirebaseAuth/Sources/Backend/FIRAuthBackend.h; sourceTree = "<group>"; };
 		E2B63D462DB7F827C4B11FD51E4F8E2D /* FirebaseCore */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FirebaseCore; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C6703C263B1D6027F741CEEC456F2C /* Starscream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.debug.xcconfig; sourceTree = "<group>"; };
@@ -5819,7 +5819,7 @@
 		EE553CF43A8A6702083EC69C650857C2 /* FIREmailLinkSignInResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIREmailLinkSignInResponse.m; path = FirebaseAuth/Sources/Backend/RPC/FIREmailLinkSignInResponse.m; sourceTree = "<group>"; };
 		EE5DC0C5A70FE79182D66B33306B0D60 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		EE605AABEE3071B4D06A66D8352980DF /* GoogleUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleUtilities-dummy.m"; sourceTree = "<group>"; };
-		EE6DD8FC166ED967B4261137B1A50A96 /* GrowingTextView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GrowingTextView; path = GrowingTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6DD8FC166ED967B4261137B1A50A96 /* GrowingTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GrowingTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7D1C5F02B014EC0E73C061DA005AE6 /* FIRComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponent.h; path = FirebaseCore/Extension/FIRComponent.h; sourceTree = "<group>"; };
 		EEA0DE00BFD9664D670E636ED2E9B285 /* FIRCurrentDateProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRCurrentDateProvider.h; path = FirebaseInstallations/Source/Library/InstallationsIDController/FIRCurrentDateProvider.h; sourceTree = "<group>"; };
 		EEA85495D3697693116FCAC65CEC1A46 /* ssim.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ssim.c; path = src/dsp/ssim.c; sourceTree = "<group>"; };
@@ -5933,7 +5933,7 @@
 		FB4A403064BCFA52F9589239D85146C6 /* FIRAuthAPNSToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRAuthAPNSToken.h; path = FirebaseAuth/Sources/SystemService/FIRAuthAPNSToken.h; sourceTree = "<group>"; };
 		FB78919109D1ADDDC206E48985031A1F /* FIRAuthErrorUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FIRAuthErrorUtils.m; path = FirebaseAuth/Sources/Utilities/FIRAuthErrorUtils.m; sourceTree = "<group>"; };
 		FB90CC96F7B610197D3BC39EE1BD3E00 /* FirebaseDynamicLinks-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FirebaseDynamicLinks-umbrella.h"; sourceTree = "<group>"; };
-		FB9466C26AC7F7BC4759E00A16BB3E84 /* iRecordView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iRecordView; path = iRecordView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9466C26AC7F7BC4759E00A16BB3E84 /* iRecordView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iRecordView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB972E3F97D2F66FB464FB212F9A3ABC /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pl.lproj; path = FirebasePhoneAuthUI/Sources/Strings/pl.lproj; sourceTree = "<group>"; };
 		FBDB51884159465D1A34F146A63CBF09 /* FIRLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRLogger.h; path = FirebaseCore/Extension/FIRLogger.h; sourceTree = "<group>"; };
 		FBFDD14AB866B9652BACFE0019B15DA6 /* FUIPrivacyAndTermsOfServiceView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FUIPrivacyAndTermsOfServiceView.m; path = FirebaseAuthUI/Sources/FUIPrivacyAndTermsOfServiceView.m; sourceTree = "<group>"; };
@@ -10098,9 +10098,9 @@
 		F2D1C5E49A3CAF123F044BB609C0AD30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel */,
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage */,
+				242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel.framework */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage.framework */,
 				736B64357A6C420C3A7062C6D479AC7F /* Cache */,
 				9B6725B782188F18CB76A740433F14E4 /* DropDown */,
 				43B1E4CD7B30B9FD278100133C2AC788 /* FirebaseAuth */,
@@ -10121,35 +10121,35 @@
 				251C6319AD50CB50F18D50CBF727F8B2 /* GoogleToolboxForMac */,
 				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */,
 				28A6DB952CEA79E3902D41748273A364 /* GoogleUtilitiesComponents */,
-				EE6DD8FC166ED967B4261137B1A50A96 /* GrowingTextView */,
+				EE6DD8FC166ED967B4261137B1A50A96 /* GrowingTextView.framework */,
 				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher */,
-				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift */,
-				FB9466C26AC7F7BC4759E00A16BB3E84 /* iRecordView */,
+				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
+				FB9466C26AC7F7BC4759E00A16BB3E84 /* iRecordView.framework */,
 				D27AB1380DAF0880CA1823BF24736818 /* iRecordView.bundle */,
-				C76B29022B3B824D8D97E292CE9FE561 /* JTMaterialTransition */,
+				C76B29022B3B824D8D97E292CE9FE561 /* JTMaterialTransition.framework */,
 				5E4674603A5D5B9215FFA0F8E69F8B71 /* libwebp */,
 				51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */,
 				CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel */,
 				C07A82326C4AD2613CD44C2679EAF799 /* MediaWatermark */,
-				1C581F7F26BABCF5C6595E015AF7E86A /* PredictOnDeviceResource.bundle */,
+				1C581F7F26BABCF5C6595E015AF7E86A /* MLKitSmartReply-PredictOnDeviceResource */,
 				704861FCA3DD0B82D6E75F75B6D15733 /* MXPagerView */,
 				7BF4F9DF012C6B052F90491877CB3432 /* MXParallaxHeader */,
 				12DCDEDD9D4F0B636D2FA22716EC4FD0 /* MXSegmentedControl */,
 				8D7CF9A5E095B4CF6B66DA0B88E571B1 /* MXSegmentedPager */,
 				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
-				A1B9F27862201CD82B398E0B35B14128 /* NVActivityIndicatorView */,
+				A1B9F27862201CD82B398E0B35B14128 /* NVActivityIndicatorView.framework */,
 				04857C56058029E9B01C4BA6C4F61987 /* Pods-Fundoo */,
 				AA2E5AFCBCDB1837681E1B0FE48C4AFD /* Pods-FundooUITests */,
 				3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */,
 				C2105C94812B6214B154F54DCEDB72AC /* Protobuf */,
-				D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView */,
+				D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView.framework */,
 				569AD54D94D0B6BEB46E8050BC7D8BE0 /* RangeControl */,
 				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */,
 				FD65F4477DA6FF1249FE4272D666BECA /* Shimmer */,
 				50C0B0879B7086918A819F704BF40B4B /* Socket.IO-Client-Swift */,
 				891B2270823847ED23F2ECFC28F935EC /* Starscream */,
-				7AD67EFB9A7864151301DC2890207AA2 /* SwiftyGif */,
-				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */,
+				7AD67EFB9A7864151301DC2890207AA2 /* SwiftyGif.framework */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -11714,7 +11714,7 @@
 			);
 			name = iRecordView;
 			productName = iRecordView;
-			productReference = FB9466C26AC7F7BC4759E00A16BB3E84 /* iRecordView */;
+			productReference = FB9466C26AC7F7BC4759E00A16BB3E84 /* iRecordView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		028F5DEF034EEA86A1CBAF681D2E7FD7 /* iRecordView-iRecordView */ = {
@@ -11787,7 +11787,7 @@
 			);
 			name = "MLKitSmartReply-PredictOnDeviceResource";
 			productName = PredictOnDeviceResource;
-			productReference = 1C581F7F26BABCF5C6595E015AF7E86A /* PredictOnDeviceResource.bundle */;
+			productReference = 1C581F7F26BABCF5C6595E015AF7E86A /* MLKitSmartReply-PredictOnDeviceResource */;
 			productType = "com.apple.product-type.bundle";
 		};
 		0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */ = {
@@ -11823,7 +11823,7 @@
 			);
 			name = SwiftyGif;
 			productName = SwiftyGif;
-			productReference = 7AD67EFB9A7864151301DC2890207AA2 /* SwiftyGif */;
+			productReference = 7AD67EFB9A7864151301DC2890207AA2 /* SwiftyGif.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1696A504A8F8B95B82B2382D0A461BF4 /* GrowingTextView */ = {
@@ -11841,7 +11841,7 @@
 			);
 			name = GrowingTextView;
 			productName = GrowingTextView;
-			productReference = EE6DD8FC166ED967B4261137B1A50A96 /* GrowingTextView */;
+			productReference = EE6DD8FC166ED967B4261137B1A50A96 /* GrowingTextView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		25E9E9A17BC3F670357D7385C521E48E /* FirebaseCoreInternal */ = {
@@ -11896,7 +11896,7 @@
 			);
 			name = BBMetalImage;
 			productName = BBMetalImage;
-			productReference = B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage */;
+			productReference = B711D00AF8BF019026AADFDDB21BCD2C /* BBMetalImage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		33DB77D058BA93F716E93966BD259C20 /* MXSegmentedControl */ = {
@@ -12028,7 +12028,7 @@
 			);
 			name = PryntTrimmerView;
 			productName = PryntTrimmerView;
-			productReference = D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView */;
+			productReference = D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4A8E8992707D01510894596DB9BCCA00 /* FLAnimatedImage */ = {
@@ -12174,7 +12174,7 @@
 			);
 			name = ActiveLabel;
 			productName = ActiveLabel;
-			productReference = 242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel */;
+			productReference = 242698546701C13E4F3A67DBB1ADBDF8 /* ActiveLabel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		79FE6559ED069211D9881924DF925C52 /* FirebasePhoneAuthUI-FirebasePhoneAuthUI */ = {
@@ -12378,7 +12378,7 @@
 			);
 			name = NVActivityIndicatorView;
 			productName = NVActivityIndicatorView;
-			productReference = A1B9F27862201CD82B398E0B35B14128 /* NVActivityIndicatorView */;
+			productReference = A1B9F27862201CD82B398E0B35B14128 /* NVActivityIndicatorView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */ = {
@@ -12396,7 +12396,7 @@
 			);
 			name = IQKeyboardManagerSwift;
 			productName = IQKeyboardManagerSwift;
-			productReference = A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift */;
+			productReference = A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BCCC6B630CE74C9C777FEC953F4F255E /* MXPagerView */ = {
@@ -12468,7 +12468,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON */;
+			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D2B5E7DCCBBFB32341D857D01211A1A3 /* nanopb */ = {
@@ -12558,7 +12558,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		ECC1EB99D5DC442EEF32B50DA56022BB /* FirebaseAuthUI */ = {
@@ -12615,7 +12615,7 @@
 			);
 			name = JTMaterialTransition;
 			productName = JTMaterialTransition;
-			productReference = C76B29022B3B824D8D97E292CE9FE561 /* JTMaterialTransition */;
+			productReference = C76B29022B3B824D8D97E292CE9FE561 /* JTMaterialTransition.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FE18904F2DB7BF0BAE305AC24A6AD170 /* Pods-Fundoo */ = {
@@ -12718,8 +12718,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -16029,7 +16029,7 @@
 			baseConfigurationReference = C36DED9CE9128319C8F7F18A89779110 /* iRecordView.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/iRecordView";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = TL5TF28YMH;
 				IBSC_MODULE = iRecordView;
 				INFOPLIST_FILE = "Target Support Files/iRecordView/ResourceBundle-iRecordView-iRecordView-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -16046,7 +16046,7 @@
 			baseConfigurationReference = F5D2E715CCBA480056B2DF54B65183A7 /* FirebaseAuthUI.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FirebaseAuthUI";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = TL5TF28YMH;
 				IBSC_MODULE = FirebaseAuthUI;
 				INFOPLIST_FILE = "Target Support Files/FirebaseAuthUI/ResourceBundle-FirebaseAuthUI-FirebaseAuthUI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -16063,7 +16063,7 @@
 			baseConfigurationReference = 3CA78D3A8FFDA073E3CF36EC3796F55A /* FirebasePhoneAuthUI.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FirebasePhoneAuthUI";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = TL5TF28YMH;
 				IBSC_MODULE = FirebasePhoneAuthUI;
 				INFOPLIST_FILE = "Target Support Files/FirebasePhoneAuthUI/ResourceBundle-FirebasePhoneAuthUI-FirebasePhoneAuthUI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -16118,7 +16118,6 @@
 			baseConfigurationReference = 7A652A09A07FFC3093DF5047205C0301 /* MLKitSmartReply.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MLKitSmartReply";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
 				IBSC_MODULE = MLKitSmartReply;
 				INFOPLIST_FILE = "Target Support Files/MLKitSmartReply/ResourceBundle-PredictOnDeviceResource-MLKitSmartReply-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -16290,6 +16289,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/NVActivityIndicatorView/NVActivityIndicatorView.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = NVActivityIndicatorView;
 				PRODUCT_NAME = NVActivityIndicatorView;
 				SDKROOT = iphoneos;
@@ -16476,7 +16476,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -16491,7 +16491,7 @@
 			baseConfigurationReference = C7314B77E023722B72036809D267C957 /* iRecordView.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/iRecordView";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = TL5TF28YMH;
 				IBSC_MODULE = iRecordView;
 				INFOPLIST_FILE = "Target Support Files/iRecordView/ResourceBundle-iRecordView-iRecordView-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -16647,6 +16647,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/iRecordView/iRecordView.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = iRecordView;
 				PRODUCT_NAME = iRecordView;
 				SDKROOT = iphoneos;
@@ -16748,6 +16749,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/PryntTrimmerView/PryntTrimmerView.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = PryntTrimmerView;
 				PRODUCT_NAME = PryntTrimmerView;
 				SDKROOT = iphoneos;
@@ -17068,7 +17070,6 @@
 			baseConfigurationReference = FFDEF0DCB49E23035FF019144E575A63 /* MLKitSmartReply.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MLKitSmartReply";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
 				IBSC_MODULE = MLKitSmartReply;
 				INFOPLIST_FILE = "Target Support Files/MLKitSmartReply/ResourceBundle-PredictOnDeviceResource-MLKitSmartReply-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -17172,6 +17173,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/JTMaterialTransition/JTMaterialTransition.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = JTMaterialTransition;
 				PRODUCT_NAME = JTMaterialTransition;
 				SDKROOT = iphoneos;
@@ -17593,6 +17595,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/BBMetalImage/BBMetalImage.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = BBMetalImage;
 				PRODUCT_NAME = BBMetalImage;
 				SDKROOT = iphoneos;
@@ -17773,6 +17776,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/ActiveLabel/ActiveLabel.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = ActiveLabel;
 				PRODUCT_NAME = ActiveLabel;
 				SDKROOT = iphoneos;
@@ -18099,7 +18103,7 @@
 			baseConfigurationReference = 90172F268E486CB32AB624B980FFF9C0 /* FirebasePhoneAuthUI.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FirebasePhoneAuthUI";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = TL5TF28YMH;
 				IBSC_MODULE = FirebasePhoneAuthUI;
 				INFOPLIST_FILE = "Target Support Files/FirebasePhoneAuthUI/ResourceBundle-FirebasePhoneAuthUI-FirebasePhoneAuthUI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -18321,7 +18325,7 @@
 			baseConfigurationReference = 2EA96881A529AF8FF6052A904E4B3297 /* FirebaseAuthUI.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FirebaseAuthUI";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = TL5TF28YMH;
 				IBSC_MODULE = FirebaseAuthUI;
 				INFOPLIST_FILE = "Target Support Files/FirebaseAuthUI/ResourceBundle-FirebaseAuthUI-FirebaseAuthUI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -18388,6 +18392,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
@@ -18456,6 +18461,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = IQKeyboardManagerSwift;
 				PRODUCT_NAME = IQKeyboardManagerSwift;
 				SDKROOT = iphoneos;
@@ -18560,6 +18566,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/GrowingTextView/GrowingTextView.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = GrowingTextView;
 				PRODUCT_NAME = GrowingTextView;
 				SDKROOT = iphoneos;
@@ -18853,6 +18860,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = SwiftyJSON;
 				PRODUCT_NAME = SwiftyJSON;
 				SDKROOT = iphoneos;
@@ -19825,6 +19833,7 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/SwiftyGif/SwiftyGif.modulemap";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = SwiftyGif;
 				PRODUCT_NAME = SwiftyGif;
 				SDKROOT = iphoneos;

@@ -24,11 +24,12 @@ var isSocketConnected = false
 var launchURL :URL? = nil
 var isWatchingLive = false
 let localAuthenticationContext = LAContext()
-//qwerty
+// qwerty
 var isNewUser = false
 
 @UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate,SRWebSocketDelegate,MessagingDelegate {
     
+    // MARK: - Properties
     var window: UIWindow?
     
     var baseUUId = UUID()
@@ -47,7 +48,8 @@ var isNewUser = false
     var chattranslatecode : String!
     var newlanguagecodevalue = ""
 
-    
+    // MARK: - App delegate Methods
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 //        do {
@@ -57,11 +59,8 @@ var isNewUser = false
 //        }
         
         self.initialSetup()
-        let screenSize = UIScreen.main.bounds
-        windowwidth = Double(screenSize.width)
-        windowheight = Double(screenSize.height)
-        pickedFromGallery = false
-        //config firebase
+
+        // Config firebase
         UserDefaults.standard.setValue("", forKey: "MsgNotification")
         DispatchQueue.main.async {
             NetworkStatus.shared.start()
@@ -260,6 +259,13 @@ var isNewUser = false
     
     //intial setup
     func initialSetup()  {
+    
+        // UI Setup
+        let screenSize = UIScreen.main.bounds
+        windowwidth = Double(screenSize.width)
+        windowheight = Double(screenSize.height)
+        pickedFromGallery = false
+        
         self.isCurrentChattingUser = ""
         UserModel.shared.setLive(status: ONLINE)
         //language
@@ -462,14 +468,14 @@ var isNewUser = false
     func redirectToTabBar() {
         if let vc = self.window?.visibleViewController(), (vc == StoryFeedVC() || vc == TrendingPage() || vc == NotificationPage() || vc == ProfileViewController()){
             if let viewController = vc as? TabViewController {
-                viewController.runtimeTabBarChanges(tabbarBackground_imge_color: UIColor.white, selectedTint: .white, unselectedTint: FOLLOW_BACKGROUND_COLOR)
+//                viewController.runtimeTabBarChanges(tabbarBackground_imge_color: UIColor.white, selectedTint: .white, unselectedTint: FOLLOW_BACKGROUND_COLOR)
                 viewController.selectedIndex = 3
             }
         }
         else {
             let vc = TabViewController()
             vc.selectedIndex = 3
-            vc.runtimeTabBarChanges(tabbarBackground_imge_color: UIColor.white, selectedTint: .white, unselectedTint: FOLLOW_BACKGROUND_COLOR)
+//            vc.runtimeTabBarChanges(tabbarBackground_imge_color: UIColor.white, selectedTint: .white, unselectedTint: FOLLOW_BACKGROUND_COLOR)
             appDelegate.window?.rootViewController = vc
         }
     }
@@ -520,7 +526,7 @@ var isNewUser = false
             //            window?.makeKeyAndVisible()
             if let vc = UIApplication.shared.keyWindow?.rootViewController as? TabViewController{
                 vc.selectedIndex = 3
-                vc.runtimeTabBarChanges(tabbarBackground_imge_color: UIColor.white, selectedTint: UIColor.white, unselectedTint: TABBAR_COLOR)
+//                vc.runtimeTabBarChanges(tabbarBackground_imge_color: UIColor.white, selectedTint: UIColor.white, unselectedTint: TABBAR_COLOR)
                 appDelegate.window?.rootViewController = vc
                 
             }
@@ -639,6 +645,8 @@ var isNewUser = false
         })
     }
     
+    // MARK: - Methods to set Initial flow of the app
+    
     //check user logged in or out
     func setInitialViewController()  {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -659,6 +667,7 @@ var isNewUser = false
         //        root.navigationBar.isTranslucent = false
         window?.rootViewController = root
     }
+    
     func checkUserProfileStatus()->UIViewController {
         if UserModel.shared.profileStatus() != nil {
             return TabViewController()
@@ -689,12 +698,9 @@ var isNewUser = false
             UserModel.shared.setPasscode(status: false)
         }
     }
+
     
-    
-    
-    
-    
-    //MARK: SOCKET LISTENERS
+    // MARK: - SOCKET LISTENERS
     
     func connectSockets()  {
         if  UserModel.shared.userID() != nil{
@@ -717,6 +723,7 @@ var isNewUser = false
     func webSocket(_ webSocket: SRWebSocket!, didFailWithError error: Error!) {
         print("SOCKET NOT CONNECTED \(error.localizedDescription) URL \(webSocket.url.absoluteString)")
     }
+    
     func webSocket(_ webSocket: SRWebSocket!, didReceiveMessage message: Any!) {
         print("GOT MSG \(String(describing: message))")
         let jsonString = message as! String
@@ -746,6 +753,7 @@ var isNewUser = false
             
         }
     }
+    
     //check if socket is chat socket or random socket
     func isChat(socket:String) -> Bool {
         let chatSocket = "\(WEB_SOCKET_CHAT_URL)\(UserModel.shared.userID()!)"
@@ -900,6 +908,7 @@ extension AppDelegate {
         }
     }
 }
+
 class AlertController: UIAlertController {
     @objc func hideAlertController() {
         self.dismiss(animated: true, completion: nil)

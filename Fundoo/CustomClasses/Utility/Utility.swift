@@ -274,7 +274,7 @@ class Utility: NSObject {
         return (isReachable && !needsConnection)
     }
 
-    //push notification register
+    // push notification register
     func pushsignIn(){
         if UserModel.shared.userID() != nil{
             let Obj = BaseWebService()
@@ -286,6 +286,11 @@ class Utility: NSObject {
             requestDict.setValue(DEVICE_MODE, forKey: "device_mode")//push notification
             requestDict.setValue(UIDevice.current.identifierForVendor!.uuidString, forKey: "device_id")
             requestDict.setValue(UIDevice.current.model, forKey: "device_model")
+            
+            print("paramerter for login...", requestDict)
+            
+            
+            
             Obj.baseService(subURl: PUSH_SIGNIN_API, params: requestDict as? Parameters, onSuccess: {response in
                 let dict = response.result.value as? NSDictionary
                 let status = dict?.value(forKey: "status") as! String
@@ -294,6 +299,7 @@ class Utility: NSObject {
             })
         }
     }
+    
     //push notification register
     func pushsignOut(){
         if UserModel.shared.userID() != nil && UserModel.shared.VOIP() != nil{
@@ -311,6 +317,7 @@ class Utility: NSObject {
             let dict = response.result.value as? NSDictionary
             let status = dict?.value(forKey: "status") as! String
             print(dict)
+                    
             if status == "true"{
                 UserModel.shared.setDefaults(dict: dict!)
                 giftsDetails.removeAll()

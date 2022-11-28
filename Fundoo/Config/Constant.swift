@@ -53,13 +53,22 @@ let TABBAR_SHADOW_COLOR = #colorLiteral(red: 0.2899999917, green: 0.2899999917, 
 let TABBAR_BACKGROUND_COLOR = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2)
 
 let PRIMARY_COLOR = #colorLiteral(red: 0.8666666667, green: 0.2, blue: 0.2, alpha: 1)
+let PRIMARY_COLOR1 = #colorLiteral(red: 0.4392156899, green: 0.9072793477, blue: 0.1921568662, alpha: 0.3600127551)
+
 let PRIMARY_COLOR_DISABLED = #colorLiteral(red: 0.8666666746, green: 0.2000000179, blue: 0.2000000179, alpha: 0.7589523619)
 
 let SEPARATOR_COLOR = #colorLiteral(red: 0.262745098, green: 0.2705882353, blue: 0.2823529412, alpha: 1)
 let PLACEHOLDER_COLOR = #colorLiteral(red: 0.6352941176, green: 0.6352941176, blue: 0.6352941176, alpha: 1)
 let GRADIENT_PRIMARY_COLOR = [UIColor().hexValue(hex: "#F07964").cgColor, UIColor().hexValue(hex: "#F07964").cgColor]
 
-//MARK: image config
+let selectedTabBarItemColor = UIColor(named: "tabBar_SelectedImgTintColor")
+let unselectedTabBarItemColor = UIColor(named: "tabBar_UnselectedImgTintColor")
+let appBgColor = UIColor(named: "appBgColor")
+let headingColor = UIColor(named: "HeadingColor")
+let subHeadingDarkColor = UIColor(named: "subHeadingColor_DarkGray")
+let subHeadingLightColor = UIColor(named: "subHeadingColor_lightGray")
+
+// MARK: - image config
 let PLACE_HOLDER_IMG = UIImage.init(named: "user_placeholder")
 
 ////MARK: Config Font

@@ -25,6 +25,7 @@ class HSChatSocket {
         chatSocket.open()
       
     }
+    
     func disconnect()  {
                chatSocket.close()
     }
@@ -49,7 +50,8 @@ class HSChatSocket {
             }
         }
     }
-    //send typing status
+    
+    // send typing status
     func typing(status:String,receiver_id:String)  {
         if isSocketConnected && chatSocket.readyState.rawValue == 1{
             if Utility.shared.isConnectedToNetwork() {
@@ -62,6 +64,7 @@ class HSChatSocket {
             }
         }
     }
+    
     //check partner live status
     func checkOnline(receiver_id:String)  {
         if Utility.shared.isConnectedToNetwork() {

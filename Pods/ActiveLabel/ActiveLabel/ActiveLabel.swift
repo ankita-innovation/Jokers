@@ -139,17 +139,6 @@ typealias ElementTuple = (range: NSRange, element: ActiveElement, type: ActiveTy
         didSet { textContainer.lineBreakMode = lineBreakMode }
     }
     
-    //qwerty
-    @IBInspectable public var fontName: String = "" {
-         didSet { updateTextStorage(parseText: false) }
-    }
-    @IBInspectable public var fontSize: CGFloat = 16 {
-        didSet { updateTextStorage(parseText: false) }
-    }
-    @IBInspectable public var useDifferentHighlightFont: Bool = false {
-        didSet { updateTextStorage(parseText: false) }
-    }
-    
     // MARK: - init functions
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -333,14 +322,10 @@ typealias ElementTuple = (range: NSRange, element: ActiveElement, type: ActiveTy
             case .url: attributes[NSAttributedString.Key.foregroundColor] = URLColor
             case .custom: attributes[NSAttributedString.Key.foregroundColor] = customColor[type] ?? defaultCustomColor
             }
-            //qwerty
-            //            if let highlightFont = hightlightFont {
-            //                attributes[NSAttributedString.Key.font] = highlightFont
-            //            }
-            if let highlightFont = UIFont(name: fontName, size: fontSize), useDifferentHighlightFont == true {
+            
+            if let highlightFont = hightlightFont {
                 attributes[NSAttributedString.Key.font] = highlightFont
             }
-            //..
             
             if let configureLinkAttribute = configureLinkAttribute {
                 attributes = configureLinkAttribute(type, attributes, false)

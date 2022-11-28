@@ -233,6 +233,8 @@ public class BBMetalCamera: NSObject {
         
         session = AVCaptureSession()
         session.beginConfiguration()
+        session.sessionPreset = sessionPreset
+        
         if !session.canAddInput(videoDeviceInput) {
             session.commitConfiguration()
             return nil

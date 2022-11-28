@@ -38,7 +38,7 @@ let GOOGLE_API_KEY = "AIzaSyD8S1BNDWS4yiPZuII49550Ya8DKh-Jp-Y"
 
 //Joker addon
 let SITE_URL = "https://jokerz.fun/" // site main url
-let BASE_URL = "https://jokerz.fun:8989" // base url for all api
+let BASE_URL = "http://161.35.75.156:8989" //"https://jokerz.fun/api/"//"https://jokerz.fun:8989" // base url for all api
 let WEB_SOCKET_CHAT_URL = "http://178.62.226.116:8990" // socket for chat
 let INVITE_URL = "http://178.62.226.116"
 

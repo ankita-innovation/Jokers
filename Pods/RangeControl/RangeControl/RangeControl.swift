@@ -9,20 +9,25 @@
 import UIKit
 import QuartzCore
 
-open class RangeControlThumbLayer: CALayer {
+// Changed
+// added public
+public class RangeControlThumbLayer: CALayer {
     private let arrowHeight = CGFloat(36.0/128.0)
     private let arrowWidth = CGFloat(16.0/32.0)
     
     var isLeft = false
     var highlighted: Bool = false
     
-    open override func action(forKey event: String) -> CAAction? {
+    // Changed Added public
+    public override func action(forKey event: String) -> CAAction? {
         if(event == "position"){  return nil }
         return super.action(forKey: event)
     }
     
     weak var rangeControl: RangeControl?
-    open override func draw(in ctx: CGContext) {
+    
+    // Changed Added public
+    public override func draw(in ctx: CGContext) {
         if let slider = rangeControl {
             let thumbFrame = bounds
             let path = UIBezierPath(roundedRect: thumbFrame, cornerRadius: 2)
@@ -40,25 +45,18 @@ open class RangeControlThumbLayer: CALayer {
             let arrowRect = CGRect(x: center.x - arrowSize.width/2, y: center.y - arrowSize.height/2, width: arrowSize.width, height: arrowSize.height)
             
             if(!isLeft){
-//                arrow.move(to: arrowRect.origin)
-//                arrow.addLine(to: CGPoint(x: center.x + arrowSize.width/2.0, y: center.y))
-//                arrow.move(to:  CGPoint(x: center.x + arrowSize.width/2.0, y: center.y))
-//                arrow.addLine(to: CGPoint(x: arrowRect.origin.x+2, y: arrowRect.origin.y + arrowRect.height))
-                arrow.move(to: CGPoint(x: center.x, y: center.y-6))
-                arrow.addLine(to: CGPoint(x: center.x, y: center.y+6))
-
-                    
+                arrow.move(to: arrowRect.origin)
+                arrow.addLine(to: CGPoint(x: center.x + arrowSize.width/2.0, y: center.y))
+                arrow.move(to:  CGPoint(x: center.x + arrowSize.width/2.0, y: center.y))
+                arrow.addLine(to: CGPoint(x: arrowRect.origin.x, y: arrowRect.origin.y + arrowRect.height))
             }else{
-//                arrow.move(to: CGPoint(x: arrowRect.origin.x + arrowSize.width, y: arrowRect.origin.y))
-//                arrow.addLine(to: CGPoint(x: center.x - arrowSize.width/2.0, y: center.y))
-//                arrow.move(to: CGPoint(x: center.x - arrowSize.width/2.0, y: center.y))
-//                arrow.addLine(to: CGPoint(x: arrowRect.origin.x + arrowSize.width, y: arrowRect.origin.y + arrowRect.height))
-                arrow.move(to: CGPoint(x: center.x, y: center.y-6))
-                arrow.addLine(to: CGPoint(x: center.x, y: center.y+6))
-
+                arrow.move(to: CGPoint(x: arrowRect.origin.x + arrowSize.width, y: arrowRect.origin.y))
+                arrow.addLine(to: CGPoint(x: center.x - arrowSize.width/2.0, y: center.y))
+                arrow.move(to: CGPoint(x: center.x - arrowSize.width/2.0, y: center.y))
+                arrow.addLine(to: CGPoint(x: arrowRect.origin.x + arrowSize.width, y: arrowRect.origin.y + arrowRect.height))
             }
             
-            ctx.setLineWidth(4)
+            ctx.setLineWidth(2.5)
             ctx.setLineCap(.round)
             ctx.setStrokeColor(UIColor.white.cgColor)
             ctx.addPath(arrow.cgPath)
@@ -96,10 +94,9 @@ class RangeControlTrackLayer: CALayer {
             
             //Frame borders
             let border = CGRect(x: lowerValuePosition, y: 0, width: upperValuePosition - lowerValuePosition , height: bounds.height)
-            
             let borderPath = UIBezierPath(rect: border)
             
-            let borderCut = CGRect(x: lowerValuePosition, y: 0, width: upperValuePosition - lowerValuePosition , height: bounds.height)
+            let borderCut = CGRect(x: lowerValuePosition, y: 1, width: upperValuePosition - lowerValuePosition , height: bounds.height-2)
             let borderCutPath = UIBezierPath(rect: borderCut)
             
             borderPath.append(borderCutPath.reversing())
@@ -119,8 +116,12 @@ open class RangeControl: UIControl{
     let margin = CGFloat(4.0)
     
     private let trackLayer = RangeControlTrackLayer()
-    public let lowThumbLayer = RangeControlThumbLayer()
-    public let upThumbLayer = RangeControlThumbLayer()
+    
+    let lowThumbLayer = RangeControlThumbLayer()
+    
+    
+    
+    private let upThumbLayer = RangeControlThumbLayer()
     public let backgroundView = UIStackView()
     private let contentView = UIView()
     
@@ -144,7 +145,7 @@ open class RangeControl: UIControl{
     }
     
     open var thumbWidth:CGFloat{
-        return CGFloat(bounds.height/7.0)
+        return CGFloat(bounds.height/4.0)
     }
     
     open var thumbHeight:CGFloat{

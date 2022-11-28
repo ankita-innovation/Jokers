@@ -193,8 +193,8 @@ class UserModel: NSObject {
         UserDefaults.standard.set(encodedData, forKey: "app_defaults_info")
     }
     func getDefaults() -> NSDictionary? {
-        let decoded  = UserDefaults.standard.object(forKey: "app_defaults_info") as! Data
-        let decodedTeams = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! NSDictionary
+        let decoded  = UserDefaults.standard.object(forKey: "app_defaults_info") as? Data
+        let decodedTeams = NSKeyedUnarchiver.unarchiveObject(with: decoded!) as? NSDictionary
         return decodedTeams
     }
     //passcode

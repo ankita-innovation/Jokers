@@ -107,8 +107,7 @@ public class RecordView: UIView, CAAnimationDelegate {
         arrow.widthAnchor.constraint(equalToConstant: 15).isActive = true
         arrow.heightAnchor.constraint(equalToConstant: 15).isActive = true
 
-       // slideToCancelStackVIew.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        slideToCancelStackVIew.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -30).isActive = true
+        slideToCancelStackVIew.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         slideToCancelStackVIew.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
 
 
