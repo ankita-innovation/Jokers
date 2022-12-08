@@ -3697,7 +3697,7 @@
 		1B8064BE54CB3ADA92AC072B5E049DB9 /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = FirebaseCore/Internal/Sources/HeartbeatLogging/Storage.swift; sourceTree = "<group>"; };
 		1BA030F387ECA6635F1A02D729BAF39F /* FBLPromise+Await.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Await.h"; path = "Sources/FBLPromises/include/FBLPromise+Await.h"; sourceTree = "<group>"; };
 		1BF8C76C02E9CBC49ADA3FEABA87EB5D /* FIRSignInWithGameCenterRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRSignInWithGameCenterRequest.h; path = FirebaseAuth/Sources/Backend/RPC/FIRSignInWithGameCenterRequest.h; sourceTree = "<group>"; };
-		1C581F7F26BABCF5C6595E015AF7E86A /* MLKitSmartReply-PredictOnDeviceResource */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "MLKitSmartReply-PredictOnDeviceResource"; path = PredictOnDeviceResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C581F7F26BABCF5C6595E015AF7E86A /* PredictOnDeviceResource.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PredictOnDeviceResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C6E87BCBD63A1F9ACF57BD2C1F75C4E /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sk.lproj; path = FirebaseAuthUI/Sources/Strings/sk.lproj; sourceTree = "<group>"; };
 		1C8627AE041C102988520F6E1E6EF99E /* MarqueeLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MarqueeLabel.modulemap; sourceTree = "<group>"; };
 		1CAC7E3D1DBDFC29BC06C57A8E896686 /* es-PA.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "es-PA.lproj"; path = "FirebasePhoneAuthUI/Sources/Strings/es-PA.lproj"; sourceTree = "<group>"; };
@@ -10131,7 +10131,7 @@
 				51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */,
 				CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel */,
 				C07A82326C4AD2613CD44C2679EAF799 /* MediaWatermark */,
-				1C581F7F26BABCF5C6595E015AF7E86A /* MLKitSmartReply-PredictOnDeviceResource */,
+				1C581F7F26BABCF5C6595E015AF7E86A /* PredictOnDeviceResource.bundle */,
 				704861FCA3DD0B82D6E75F75B6D15733 /* MXPagerView */,
 				7BF4F9DF012C6B052F90491877CB3432 /* MXParallaxHeader */,
 				12DCDEDD9D4F0B636D2FA22716EC4FD0 /* MXSegmentedControl */,
@@ -11787,7 +11787,7 @@
 			);
 			name = "MLKitSmartReply-PredictOnDeviceResource";
 			productName = PredictOnDeviceResource;
-			productReference = 1C581F7F26BABCF5C6595E015AF7E86A /* MLKitSmartReply-PredictOnDeviceResource */;
+			productReference = 1C581F7F26BABCF5C6595E015AF7E86A /* PredictOnDeviceResource.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */ = {
@@ -16117,11 +16117,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A652A09A07FFC3093DF5047205C0301 /* MLKitSmartReply.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MLKitSmartReply";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8N598D88A4;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 8N598D88A4;
 				IBSC_MODULE = MLKitSmartReply;
 				INFOPLIST_FILE = "Target Support Files/MLKitSmartReply/ResourceBundle-PredictOnDeviceResource-MLKitSmartReply-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = PredictOnDeviceResource;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -17069,11 +17074,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FFDEF0DCB49E23035FF019144E575A63 /* MLKitSmartReply.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MLKitSmartReply";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8N598D88A4;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 8N598D88A4;
 				IBSC_MODULE = MLKitSmartReply;
 				INFOPLIST_FILE = "Target Support Files/MLKitSmartReply/ResourceBundle-PredictOnDeviceResource-MLKitSmartReply-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_NAME = PredictOnDeviceResource;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

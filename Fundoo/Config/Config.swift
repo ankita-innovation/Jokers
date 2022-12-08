@@ -14,6 +14,7 @@ let DEFAULT_LANGUAGE = "English" // default app language
 let ENCRYPT_KEY = "crypt@123" // message encryption key.
 
 //MARK: PUSH NOTIFICATION **************
+
 let DEVICE_MODE = "1" //0-Development, 1-Production
 
 //Change entitlements APS Environment "development/production"
@@ -24,7 +25,7 @@ let IAP_VALIDATION_URL = "https://sandbox.itunes.apple.com/verifyReceipt" // san
 //let IAP_VALIDATION_URL = "https://buy.itunes.apple.com/verifyReceipt" // live
 let APP_NAME = "Jokerz"
 
-//MARK: Dynamic links
+// MARK: Dynamic links
 
 let DYNAMIC_LINK = "https://jokerz.page.link" // create it from firebase dynamic link section
 let IOS_BUNDLE_ID = "com.app.jokerz"
@@ -36,14 +37,14 @@ let APP_RTC_URL = "" // for webrtc don't disturb here
 let GOOGLE_API_KEY = "AIzaSyD8S1BNDWS4yiPZuII49550Ya8DKh-Jp-Y"
 
 
-//Joker addon
+// Joker addon
 let SITE_URL = "https://jokerz.fun/" // site main url
 let BASE_URL = "http://161.35.75.156:8989" //"https://jokerz.fun/api/"//"https://jokerz.fun:8989" // base url for all api
 let WEB_SOCKET_CHAT_URL = "http://178.62.226.116:8990" // socket for chat
 let INVITE_URL = "http://178.62.226.116"
 
+// MARK: FUNDOO
 
-//MARK: FUNDOO
 //API - attachment URL **************
 let PROFILE_IMAGE_URL = "\(SITE_URL)/fundoo_29/public/img/accounts/"
 let GIFT_IMAGE_URL = "\(SITE_URL)/fundoo_29/public/img/gifts/"

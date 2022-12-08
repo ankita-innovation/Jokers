@@ -13,7 +13,7 @@ extension UILabel{
  
     //MARK: configure label
     public func config(color:UIColor,font:UIFont?, align:NSTextAlignment, text:String){
-        self.textColor = color
+//        self.textColor = color
         self.textAlignment = align
         self.text = Utility().getAppLanguage()?.value(forKey: text) as? String
         self.font = font
