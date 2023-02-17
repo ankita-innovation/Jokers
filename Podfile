@@ -19,6 +19,7 @@ target 'Fundoo' do
   pod 'MXSegmentedPager'
   
   pod 'Shimmer'
+  pod 'MBProgressHUD'
 
   pod 'BBMetalImage'
   pod 'ActiveLabel'

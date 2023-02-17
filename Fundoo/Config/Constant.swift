@@ -61,12 +61,7 @@ let SEPARATOR_COLOR = #colorLiteral(red: 0.262745098, green: 0.2705882353, blue:
 let PLACEHOLDER_COLOR = #colorLiteral(red: 0.6352941176, green: 0.6352941176, blue: 0.6352941176, alpha: 1)
 let GRADIENT_PRIMARY_COLOR = [UIColor().hexValue(hex: "#F07964").cgColor, UIColor().hexValue(hex: "#F07964").cgColor]
 
-let selectedTabBarItemColor = UIColor(named: "tabBar_SelectedImgTintColor")
-let unselectedTabBarItemColor = UIColor(named: "tabBar_UnselectedImgTintColor")
-let appBgColor = UIColor(named: "appBgColor")
-let headingColor = UIColor(named: "HeadingColor")
-let subHeadingDarkColor = UIColor(named: "subHeadingColor_DarkGray")
-let subHeadingLightColor = UIColor(named: "subHeadingColor_lightGray")
+
 
 // MARK: - image config
 let PLACE_HOLDER_IMG = UIImage.init(named: "user_placeholder")

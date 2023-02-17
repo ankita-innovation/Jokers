@@ -13,7 +13,7 @@ protocol storeDelegate {
     func gotStoredInfo(type:String,msg:Messages?)
 }
 
-let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let context = appDelegate.persistentContainer.viewContext
 
 class Entities {

@@ -424,8 +424,15 @@ class Utility: NSObject {
         return "\(UserModel.shared.userID()!)234324SFSD\(String(format: "%.0f", timestamp.rounded()))"
     }
     func goToLoginPage()  {
-        appDelegate.moveLoginPage()
+        
+        let storyboard = UIStoryboard(name: enumStoryBoard.initial.rawValue, bundle: nil)
+        let MainView = storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.initialVC.rawValue) as! InitialVC
+
+        let navController = UINavigationController.init(rootViewController: MainView)
+
+        self.window?.rootViewController = navController
     }
+    
     //MARK: Check string is empty
     func checkEmpty(str:String) -> Bool {
         if  (str == "") || (str == "NULL") || (str == "(null)") || (str == "<null>") || (str == "Json Error") || (str.isEmpty) ||  str.trimmingCharacters(in: .whitespaces).isEmpty || str.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).isEmpty  {

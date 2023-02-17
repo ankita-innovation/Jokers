@@ -178,6 +178,7 @@ PODS:
   - libwebp/webp (1.2.3)
   - lottie-ios (2.5.2)
   - MarqueeLabel (4.3.0)
+  - MBProgressHUD (1.2.0)
   - MediaWatermark (0.4.0)
   - MLKitCommon (8.0.0):
     - GoogleDataTransport (~> 9.0)
@@ -257,6 +258,7 @@ DEPENDENCIES:
   - JTMaterialTransition (~> 2.0)
   - lottie-ios
   - MarqueeLabel
+  - MBProgressHUD
   - MediaWatermark
   - MXSegmentedPager
   - NVActivityIndicatorView
@@ -308,6 +310,7 @@ SPEC REPOS:
     - libwebp
     - lottie-ios
     - MarqueeLabel
+    - MBProgressHUD
     - MediaWatermark
     - MLKitCommon
     - MLKitLanguageID
@@ -369,6 +372,7 @@ SPEC CHECKSUMS:
   libwebp: 60305b2e989864154bd9be3d772730f08fc6a59c
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   MarqueeLabel: 02f5ac8fd6877c94564556cb93fa86c70c08baeb
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MediaWatermark: d67db91deaaa9403220899adfb59c80221a02a7d
   MLKitCommon: f6da6c5659618c070b50a80db01248ebe2964175
   MLKitLanguageID: 395b867dd9105709789c32b3bac8449cccd44332
@@ -391,6 +395,6 @@ SPEC CHECKSUMS:
   SwiftyGif: b85c6b33a9411859d9e1db998b6a8214aea942df
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 9afd96bcbb183816643f0cc82037719f9a322eeb
+PODFILE CHECKSUM: 58b193e5798f3b555fba7ce4dd69c9156ffd442a
 
 COCOAPODS: 1.11.3

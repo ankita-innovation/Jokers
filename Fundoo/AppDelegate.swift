@@ -659,22 +659,22 @@ var isNewUser = false
         window?.rootViewController = viewController
     }
     
-    func moveLoginPage()  {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        let viewController = LoginPage()
-        let root = UINavigationController(rootViewController: viewController)
-        //        root.navigationBar.isTranslucent = false
-        window?.rootViewController = root
-    }
-    
+//    func moveLoginPage()  {
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.makeKeyAndVisible()
+//        let viewController = LoginPage()
+//        let root = UINavigationController(rootViewController: viewController)
+//        //        root.navigationBar.isTranslucent = false
+//        window?.rootViewController = root
+//    }
+//
     func checkUserProfileStatus()->UIViewController {
         if UserModel.shared.profileStatus() != nil {
             return TabViewController()
         }else if UserModel.shared.firstLogin() != nil{
             return TabViewController()
         }else{
-            return LoginPage()
+            return InitialVC()
         }
     }
     
