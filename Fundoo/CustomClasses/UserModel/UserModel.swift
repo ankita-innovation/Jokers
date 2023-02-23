@@ -8,6 +8,184 @@
 
 import Foundation
 import CoreData
+import SwiftyJSON
+
+//{
+//    "statusCode": 200,
+//    "message": [
+//        "user created successfully!"
+//    ],
+//    "data": {
+//        "id": "63f07f9b6521513824e63843"
+//        "username": "test101",
+//        "f_name": "test",
+//        "l_name": "test",
+//        "fullName": "test test",
+//        "email": "test101@gmail.com",
+//        "phone_number": "65656565",
+//        "date_of_birth": "2022-01-01T00:00:00.000Z",
+//        "gender": 1,
+//        "profile_photo": "",
+//        "bio": "",
+
+//        "referral_code": "",
+
+//        "is_active": 1,
+//        "is_banned": false,
+//        "is_verified": false,
+//        "isDeleted": false,
+
+//        "followers_count": 0,
+//        "following_count": 0,
+
+//        "privacy_type": 1,
+
+//        "deletedAt": null,
+//        "created_at": "2023-02-18T07:34:51.096Z",
+//        "updated_at": "2023-02-18T07:34:51.096Z",
+//    },
+//    "additionalData": []
+//}
+
+struct User: Codable {
+
+    let userId: String? // 1
+    let username: String? // 2
+    let firstName: String? // 3
+    let lastName: String? // 4
+    let fullName: String? // 4
+    let email: String? // 6
+    let phoneNumber: String? // 11
+    let dob: String? // 11
+    let gender: Int? // 11
+    let profilePhoto: String? // 11
+    let bio: String? // 11
+
+    let referralCode: String? // 5
+    
+    let followersCount: Int? // 8
+    let followingCount: Int? // 8
+    
+    let privacyType: Int? // 8
+
+    let isActive: Int? // 8
+    let isBanned: Bool? // 7
+    let isVerified: Bool? // 8
+    let isDeleted: Bool? // 8
+
+    let createdAt: String? // 13
+    let updatedAt: String? // 13
+    let deletedAt: String? // 13
+
+    init(userId: String, username: String, firstName: String, lastName: String, fullName: String, dob : String, phoneNumber: String, bio: String, gender: Int, profilePhoto: String, email: String, referralCode: String, followersCount: Int, followingCount: Int,privacyType:Int, isActive: Int, isBanned: Bool, isVerified: Bool, isDeleted: Bool, createdAt: String, deletedAt: String, updatedAt: String){
+        
+        self.userId = userId
+        self.username = username
+        self.firstName = firstName
+        self.lastName = lastName
+        self.fullName = fullName
+        self.email = email
+        self.phoneNumber = phoneNumber
+        self.gender = gender
+        self.dob = dob
+        self.profilePhoto = profilePhoto
+        self.bio = bio
+        
+        self.referralCode = referralCode
+
+        self.followersCount = followersCount
+        self.followingCount = followingCount
+        self.privacyType = privacyType
+        
+        self.isBanned = isBanned
+        self.isActive = isActive
+        self.isVerified = isVerified
+        self.isDeleted = isDeleted
+        
+        self.createdAt = createdAt
+        self.deletedAt = deletedAt
+        self.updatedAt = updatedAt
+    }
+
+    init(with data: [String: Any]?) {
+        
+        self.userId = data?["id"] as? String ?? emptyStr
+        self.username = data?["username"] as? String ?? emptyStr
+        self.firstName = data?["f_name"] as? String ?? emptyStr
+        self.lastName = data?["l_name"] as? String ?? emptyStr
+        self.fullName = data?["fullName"] as? String ?? emptyStr
+        self.email = data?["email"] as? String ?? emptyStr
+        self.phoneNumber = data?["phone_number"] as? String ?? emptyStr
+        self.bio = data?["bio"] as? String ?? emptyStr
+        self.gender = data?["gender"] as? Int ?? zero
+        self.profilePhoto = data?["profile_photo"] as? String ?? emptyStr
+        self.dob = data?["date_of_birth"] as? String ?? emptyStr
+
+        self.referralCode = data?["referral_code"] as? String ?? emptyStr
+        
+        self.followersCount = data?["followers_count"] as? Int ?? zero
+        self.followingCount = data?["following_count"] as? Int ?? zero
+        self.privacyType = data?["privacy_type"] as? Int ?? zero
+        
+        self.isActive = data?["is_active"] as? Int ?? zero
+        self.isBanned = data?["is_banned"] as? Bool ?? false
+        self.isVerified = data?["is_verified"] as? Bool ?? false
+        self.isDeleted = data?["isDeleted"] as? Bool ?? false
+
+        self.updatedAt = data?["updated_at"] as? String ?? emptyStr
+        self.createdAt = data?["created_at"] as? String ?? emptyStr
+        self.deletedAt = data?["deletedAt"] as? String ?? emptyStr
+        
+    }
+    
+//    init(json:JSON){
+//        self.userId = json["userId"].stringValue
+//        self.username = json["username"].stringValue
+//        self.firstName = json["firstName"].stringValue
+//        self.lastName = json["lastName"].stringValue
+//        self.email = json["email"].stringValue
+//        self.referralCode = json["referralCode"].stringValue
+//        self.isActive = json["isActive"].intValue
+//        self.wallet = json["wallet"].stringValue
+//        self.hasKey = json["hasKey"].intValue
+//        self.phone = json["phone"].stringValue
+//        self.isBlocked = json["isBlocked"].intValue
+//        self.fcmToken = json["fcmToken"].stringValue
+//        self.createdAt = json["createdAt"].stringValue
+//        self.isPhoneVerified = json["isPhoneVerified"].boolValue
+//    }
+    
+    func toAnyObject() -> Any {
+        
+        return [
+            "id" : userId ?? emptyStr,
+            "username": username ?? emptyStr,
+            "f_name": firstName ?? emptyStr,
+            "l_name": lastName ?? emptyStr,
+            "fullName": fullName ?? emptyStr,
+            "email": email ?? emptyStr,
+            "phone_number": phoneNumber ?? emptyStr,
+            "date_of_birth": dob ?? emptyStr,
+            "gender": gender ?? zero,
+            "bio": bio ?? emptyStr,
+            "profile_photo": profilePhoto ?? emptyStr,
+            "referral_code": referralCode ?? emptyStr,
+            "following_count": followingCount ?? zero,
+        ]
+    }
+    
+//    "followers_count": followersCount ?? zero,
+//    "privacy_type": privacyType ?? zero,
+//    "is_active": isActive ?? zero,
+//    "is_banned": isBanned ?? false,
+//    "is_verified": isVerified ?? false,
+//    "isDeleted": isDeleted ?? false,
+//    "updated_at": updatedAt ?? emptyStr,
+//    "created_at": createdAt ?? emptyStr,
+//    "deletedAt": deletedAt ?? emptyStr,
+
+}
+
 
 class UserModel: NSObject {
     static let shared = UserModel()
@@ -353,9 +531,11 @@ class UserModel: NSObject {
             }
         }
     }
+    
     func setUserName(name:NSString){
         UserDefaults.standard.set(name, forKey: "user_profile_name")
     }
+    
     func userName() -> NSString? {
         return UserDefaults.standard.value(forKey: "user_profile_name") as? NSString
     }

@@ -423,6 +423,7 @@ class Utility: NSObject {
         let timestamp = NSDate().timeIntervalSince1970
         return "\(UserModel.shared.userID()!)234324SFSD\(String(format: "%.0f", timestamp.rounded()))"
     }
+    
     func goToLoginPage()  {
         
         let storyboard = UIStoryboard(name: enumStoryBoard.initial.rawValue, bundle: nil)
@@ -430,7 +431,7 @@ class Utility: NSObject {
 
         let navController = UINavigationController.init(rootViewController: MainView)
 
-        self.window?.rootViewController = navController
+        appDelegate.window?.rootViewController = navController
     }
     
     //MARK: Check string is empty

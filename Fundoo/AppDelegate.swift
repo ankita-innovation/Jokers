@@ -59,7 +59,9 @@ var isNewUser = false
 //        }
         
         self.initialSetup()
+        userDefault.set("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxMDBAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ0ZXN0MTAwIiwiaWQiOiI2M2Y3MWY4ZmQyNjUwMTY5MzM5ZGMyODIiLCJpYXQiOjE2NzcxMzk5ODgsImV4cCI6MTY3ODAwMzk4OH0.w-ySwp6JOIC_IAIkJorjYG2Gfmc_Y_1aDXpxWdHZItQ", forKey: USER_DEFAULT_userLoginToken_Key)
 
+        self.navigateToRightScreen()
         // Config firebase
         UserDefaults.standard.setValue("", forKey: "MsgNotification")
         DispatchQueue.main.async {
@@ -130,6 +132,40 @@ var isNewUser = false
         }
         return true
     }
+    
+    func navigateToRightScreen(){
+        
+        
+        if userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key) != nil{//} && UserDefaultsToStoreUserInfo.getuserID() != emptyStr{
+            print("user_id.1", userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key))
+//
+//
+//            let otherVCObj = TabViewController(nibName: "TabViewController", bundle: nil)
+//            let navController = UINavigationController.init(rootViewController: otherVCObj)
+//
+//            self.window?.rootViewController = navController
+//            self.navigationController?.pushViewController(otherVCObj, animated: true)
+            
+            
+            let storyboard = UIStoryboard(name: enumStoryBoard.tabBar.rawValue, bundle: nil)
+            let MainView = storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.tabBarVC.rawValue) as! TabBarVC
+
+            let navController = UINavigationController.init(rootViewController: MainView)
+
+            self.window?.rootViewController = navController
+            
+        }else{
+            print("user_id.2", userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key))
+
+            let storyboard = UIStoryboard(name: enumStoryBoard.initial.rawValue, bundle: nil)
+            let MainView = storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.initialVC.rawValue) as! InitialVC
+
+            let navController = UINavigationController.init(rootViewController: MainView)
+
+            self.window?.rootViewController = navController
+        }
+    }
+
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

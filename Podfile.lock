@@ -3,6 +3,8 @@ PODS:
   - Alamofire (4.8.1)
   - BBMetalImage (1.1.6)
   - Cache (6.0.0)
+  - CryptoSwift (1.0.0)
+  - DialCountries (0.1.3)
   - DropDown (2.3.13)
   - ffmpeg-kit-ios-full (4.5.1.LTS)
   - Firebase (9.6.0):
@@ -164,6 +166,9 @@ PODS:
     - GoogleUtilities/Logger
   - GrowingTextView (0.6.1)
   - GTMSessionFetcher/Core (1.7.2)
+  - HDWalletKit (0.3.6):
+    - CryptoSwift (~> 1.0.0)
+    - secp256k1.swift (~> 0.1.4)
   - IQKeyboardManagerSwift (6.5.1)
   - iRecordView (0.1.4)
   - JTMaterialTransition (2.0.3)
@@ -224,18 +229,27 @@ PODS:
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
+  - secp256k1.swift (0.1.4)
   - Shimmer (1.0.2)
   - Socket.IO-Client-Swift (15.1.0):
     - Starscream (~> 3.1)
   - Starscream (3.1.0)
+  - SwiftProtobuf (1.20.3)
   - SwiftyGif (5.2.0)
   - SwiftyJSON (4.2.0)
+  - TrustWalletCore (3.1.16):
+    - TrustWalletCore/Core (= 3.1.16)
+  - TrustWalletCore/Core (3.1.16):
+    - TrustWalletCore/Types
+  - TrustWalletCore/Types (3.1.16):
+    - SwiftProtobuf
 
 DEPENDENCIES:
   - ActiveLabel
   - Alamofire (~> 4.8.1)
   - BBMetalImage
   - Cache
+  - DialCountries
   - DropDown
   - ffmpeg-kit-ios-full (= 4.5.1.LTS)
   - Firebase
@@ -253,6 +267,7 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - GoogleMLKit/SmartReply
   - GrowingTextView (= 0.6.1)
+  - HDWalletKit
   - IQKeyboardManagerSwift
   - iRecordView (~> 0.1.1)
   - JTMaterialTransition (~> 2.0)
@@ -269,6 +284,7 @@ DEPENDENCIES:
   - Socket.IO-Client-Swift (~> 15.1.0)
   - SwiftyGif
   - SwiftyJSON (~> 4.0)
+  - TrustWalletCore
 
 SPEC REPOS:
   trunk:
@@ -276,6 +292,8 @@ SPEC REPOS:
     - Alamofire
     - BBMetalImage
     - Cache
+    - CryptoSwift
+    - DialCountries
     - DropDown
     - ffmpeg-kit-ios-full
     - Firebase
@@ -304,6 +322,7 @@ SPEC REPOS:
     - GoogleUtilitiesComponents
     - GrowingTextView
     - GTMSessionFetcher
+    - HDWalletKit
     - IQKeyboardManagerSwift
     - iRecordView
     - JTMaterialTransition
@@ -327,17 +346,22 @@ SPEC REPOS:
     - PryntTrimmerView
     - RangeControl
     - SDWebImage
+    - secp256k1.swift
     - Shimmer
     - Socket.IO-Client-Swift
     - Starscream
+    - SwiftProtobuf
     - SwiftyGif
     - SwiftyJSON
+    - TrustWalletCore
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   BBMetalImage: c61f7076d0727f66f7dda9ee24c7774f842e4b18
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
+  DialCountries: 098cb20d88eba888dcc0474060694b545fb36ce1
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   ffmpeg-kit-ios-full: 341a178eebe25ab54b92e4d040a00231b23b7c30
   Firebase: 5ae8b7cf8efce559a653aef0ad95bab3f427c351
@@ -366,6 +390,7 @@ SPEC CHECKSUMS:
   GoogleUtilitiesComponents: 679b2c881db3b615a2777504623df6122dd20afe
   GrowingTextView: 335aefa45df7df06b01edede1363414d6ee5d6bc
   GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
+  HDWalletKit: 6d97a15404b2edfe3418e3dc064faa967e51dac4
   IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
   iRecordView: 83aa080ce0c64db443a5f3969e441a7f12f9b8b5
   JTMaterialTransition: 7ff22aae6cd969734d775708f08e3656c52cb7bf
@@ -389,12 +414,15 @@ SPEC CHECKSUMS:
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   RangeControl: 2e241b6a4ac5236b1a2fdd2605e9a677562a8d92
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   Socket.IO-Client-Swift: 7cb44c0ffb86e158cee32d0642d30ec5fdcf8f61
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
+  SwiftProtobuf: b02b5075dcf60c9f5f403000b3b0c202a11b6ae1
   SwiftyGif: b85c6b33a9411859d9e1db998b6a8214aea942df
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  TrustWalletCore: ed9e4261c4e547ce8074db5108fe4a0284242278
 
-PODFILE CHECKSUM: 58b193e5798f3b555fba7ce4dd69c9156ffd442a
+PODFILE CHECKSUM: 1dc09dd397770bf01f821e1b4fb955de90b9b955
 
 COCOAPODS: 1.11.3

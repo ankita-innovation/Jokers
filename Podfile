@@ -20,7 +20,10 @@ target 'Fundoo' do
   
   pod 'Shimmer'
   pod 'MBProgressHUD'
-
+  pod 'DialCountries'
+  pod 'HDWalletKit'
+  pod 'TrustWalletCore'
+  
   pod 'BBMetalImage'
   pod 'ActiveLabel'
   pod 'RangeControl'
