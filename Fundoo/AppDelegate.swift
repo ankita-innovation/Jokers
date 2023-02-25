@@ -135,10 +135,13 @@ var isNewUser = false
     
     func navigateToRightScreen(){
         if userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key) != nil{//} && UserDefaultsToStoreUserInfo.getuserID() != emptyStr{
-            print("user_id.1", userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key))
+//            print("user_id.1", userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key))
+            
+            
+            
             CommonFxns.goToHomeScreen()
         }else{
-            print("user_id.2", userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key))
+//            print("user_id.2", userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key))
             CommonFxns.goToInitialScreen()
         }
     }
@@ -174,7 +177,7 @@ var isNewUser = false
         Utility.shared.clearNotifications()
         // }
     }
-    
+
     
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
