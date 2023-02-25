@@ -134,51 +134,45 @@ var isNewUser = false
     }
     
     func navigateToRightScreen(){
-        
-        
         if userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key) != nil{//} && UserDefaultsToStoreUserInfo.getuserID() != emptyStr{
             print("user_id.1", userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key))
-//
-//
-//            let otherVCObj = TabViewController(nibName: "TabViewController", bundle: nil)
-//            let navController = UINavigationController.init(rootViewController: otherVCObj)
-//
-//            self.window?.rootViewController = navController
-//            self.navigationController?.pushViewController(otherVCObj, animated: true)
-            
-            
-            let storyboard = UIStoryboard(name: enumStoryBoard.tabBar.rawValue, bundle: nil)
-            let MainView = storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.tabBarVC.rawValue) as! TabBarVC
-
-            let navController = UINavigationController.init(rootViewController: MainView)
-
-            self.window?.rootViewController = navController
-            
+            CommonFxns.goToHomeScreen()
         }else{
             print("user_id.2", userDefault.value(forKey: USER_DEFAULT_userLoginToken_Key))
-
-            let storyboard = UIStoryboard(name: enumStoryBoard.initial.rawValue, bundle: nil)
-            let MainView = storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.initialVC.rawValue) as! InitialVC
-
-            let navController = UINavigationController.init(rootViewController: MainView)
-
-            self.window?.rootViewController = navController
+            CommonFxns.goToInitialScreen()
         }
     }
-
     
+//    func goToHomeScreen(){
+//
+//        let storyboard = UIStoryboard(name: enumStoryBoard.tabBar.rawValue, bundle: nil)
+//        let MainView = storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.tabBarVC.rawValue) as! TabBarVC
+//        let navController = UINavigationController.init(rootViewController: MainView)
+//        self.window?.rootViewController = navController
+//
+//        //            let otherVCObj = TabViewController(nibName: "TabViewController", bundle: nil)
+//        //            let navController = UINavigationController.init(rootViewController: otherVCObj)
+//        //
+//        //            self.window?.rootViewController = navController
+//        //            self.navigationController?.pushViewController(otherVCObj, animated: true)
+//    }
+//
+//    func goToInitialScreen(){
+//
+//        let storyboard = UIStoryboard(name: enumStoryBoard.initial.rawValue, bundle: nil)
+//        let MainView = storyboard.instantiateViewController(withIdentifier: enumViewControllerIdentifier.initialVC.rawValue) as! InitialVC
+//        let navController = UINavigationController.init(rootViewController: MainView)
+//        self.window?.rootViewController = navController
+//    }
+//
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-        
-        
         self.newNotificationViewed = true
         //if !isSocketConnected{
         self.connectSockets()
         Utility.shared.clearNotifications()
         // }
-        
-        
     }
     
     
@@ -678,7 +672,9 @@ var isNewUser = false
                 }))
                 alertVC.show(into: self.window?.rootViewController)
             }
-        })
+        }){ error in
+            print("error...", error)
+        }
     }
     
     // MARK: - Methods to set Initial flow of the app

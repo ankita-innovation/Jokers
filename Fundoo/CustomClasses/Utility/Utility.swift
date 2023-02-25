@@ -296,7 +296,9 @@ class Utility: NSObject {
                 let status = dict?.value(forKey: "status") as! String
                 if status == "true"{
                 }
-            })
+            }){ error in
+                print("error...", error)
+            }
         }
     }
     
@@ -496,7 +498,9 @@ class Utility: NSObject {
                                                 if status == "true"{
                                                     UserModel.shared.updateProfile()
                                                 }
-                                            })
+                                            }){ error in
+                                                print("error...", error)
+                                            }
                                         }
                                     } else { print("Failed to cast serialized JSON to Dictionary<String, AnyObject>") }
                                 }
@@ -537,7 +541,9 @@ class Utility: NSObject {
                             let status = dict?.value(forKey: "status") as! String
                             if status == "true"{
                             }
-                        })
+                        }){ error in
+                            print("error...", error)
+                        }
             }catch{
 
             }

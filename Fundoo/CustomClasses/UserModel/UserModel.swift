@@ -475,7 +475,9 @@ class UserModel: NSObject {
                 UserModel.shared.setGem(count: available_gems)
                 
             }
-        })
+        }){ error in
+            print("error...", error)
+        }
     }
     
     //rtc turn details  service
