@@ -59,8 +59,10 @@ var isNewUser = false
 //        }
         
         self.initialSetup()
-        userDefault.set("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxMDBAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ0ZXN0MTAwIiwiaWQiOiI2M2Y3MWY4ZmQyNjUwMTY5MzM5ZGMyODIiLCJpYXQiOjE2NzcxMzk5ODgsImV4cCI6MTY3ODAwMzk4OH0.w-ySwp6JOIC_IAIkJorjYG2Gfmc_Y_1aDXpxWdHZItQ", forKey: USER_DEFAULT_userLoginToken_Key)
+//        userDefault.set("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QxMDBAZ21haWwuY29tIiwidXNlcm5hbWUiOiJ0ZXN0MTAwIiwiaWQiOiI2M2Y3MWY4ZmQyNjUwMTY5MzM5ZGMyODIiLCJpYXQiOjE2NzcxMzk5ODgsImV4cCI6MTY3ODAwMzk4OH0.w-ySwp6JOIC_IAIkJorjYG2Gfmc_Y_1aDXpxWdHZItQ", forKey: USER_DEFAULT_userLoginToken_Key)
 
+//        userDefault.removeObject(forKey: USER_DEFAULT_userLoginToken_Key)
+        
         self.navigateToRightScreen()
         // Config firebase
         UserDefaults.standard.setValue("", forKey: "MsgNotification")

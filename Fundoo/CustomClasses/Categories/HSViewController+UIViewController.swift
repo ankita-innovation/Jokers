@@ -20,6 +20,7 @@ extension UIViewController{
         CRNotifications.showNotification(textColor: .white, backgroundColor: PRIMARY_COLOR, image: UIImage.init(named: "brodcastInfo_icon"), title: APP_NAME, message: alert, dismissDelay: 2)
 
     }
+    
     //show alert
     func showAlert(msg:String)  {
         let otherAlert = UIAlertController(title: nil, message: Utility().getAppLanguage()?.value(forKey: msg) as? String, preferredStyle: UIAlertController.Style.alert)
