@@ -10,93 +10,54 @@ import Foundation
 import CoreData
 import SwiftyJSON
 
-//{
-//    "statusCode": 200,
-//    "message": [
-//        "user created successfully!"
-//    ],
-//    "data": {
-//        "id": "63f07f9b6521513824e63843"
-//        "username": "test101",
-//        "f_name": "test",
-//        "l_name": "test",
-//        "fullName": "test test",
-//        "email": "test101@gmail.com",
-//        "phone_number": "65656565",
-//        "date_of_birth": "2022-01-01T00:00:00.000Z",
-//        "gender": 1,
-//        "profile_photo": "",
-//        "bio": "",
-
-//        "referral_code": "",
-
-//        "is_active": 1,
-//        "is_banned": false,
-//        "is_verified": false,
-//        "isDeleted": false,
-
-//        "followers_count": 0,
-//        "following_count": 0,
-
-//        "privacy_type": 1,
-
-//        "deletedAt": null,
-//        "created_at": "2023-02-18T07:34:51.096Z",
-//        "updated_at": "2023-02-18T07:34:51.096Z",
-//    },
-//    "additionalData": []
-//}
-
 struct User: Codable {
 
     let userId: String? // 1
     let username: String? // 2
     let firstName: String? // 3
     let lastName: String? // 4
-    let fullName: String? // 4
     let email: String? // 6
-    let phoneNumber: String? // 11
-    let dob: String? // 11
-    let gender: Int? // 11
-    let profilePhoto: String? // 11
+    let phoneNumber: String? // 7
+    let dob: String? // 8
+    let gender: Int? // 9
+    let profilePhoto: String? // 10
     let bio: String? // 11
+    let referralCode: String? // 12
+        
+    let privacyType: Int? // 15
+    let isActive: Int? // 16
+    let isBanned: Bool? // 17
+    let isVerified: Bool? // 18
+    let isDeleted: Bool? // 19
 
-    let referralCode: String? // 5
+    let createdAt: String? // 20
+    let updatedAt: String? // 21
+    let deletedAt: String? // 22
+
+    let followersCount: Int? // 13
+    let followingCount: Int? // 14
     
-    let followersCount: Int? // 8
-    let followingCount: Int? // 8
-    
-    let privacyType: Int? // 8
+    let blockedCount : Int? // 23
+    let likesCount : Int? // 24
+    let videoCount : Int? // 25
+    let refersCount : Int? // 26
+    let viewsCount: Int? // 5
 
-    let isActive: Int? // 8
-    let isBanned: Bool? // 7
-    let isVerified: Bool? // 8
-    let isDeleted: Bool? // 8
-
-    let createdAt: String? // 13
-    let updatedAt: String? // 13
-    let deletedAt: String? // 13
-
-    init(userId: String, username: String, firstName: String, lastName: String, fullName: String, dob : String, phoneNumber: String, bio: String, gender: Int, profilePhoto: String, email: String, referralCode: String, followersCount: Int, followingCount: Int,privacyType:Int, isActive: Int, isBanned: Bool, isVerified: Bool, isDeleted: Bool, createdAt: String, deletedAt: String, updatedAt: String){
+    init(userId: String, username: String, firstName: String, lastName: String, viewsCount: Int, dob : String, phoneNumber: String, bio: String, gender: Int, profilePhoto: String, email: String, referralCode: String, followersCount: Int, followingCount: Int,privacyType:Int, isActive: Int, isBanned: Bool, isVerified: Bool, isDeleted: Bool, createdAt: String, deletedAt: String, updatedAt: String, blockedCount: Int, likesCount: Int, videoCount: Int, refersCount: Int){
         
         self.userId = userId
         self.username = username
         self.firstName = firstName
         self.lastName = lastName
-        self.fullName = fullName
         self.email = email
         self.phoneNumber = phoneNumber
         self.gender = gender
         self.dob = dob
         self.profilePhoto = profilePhoto
         self.bio = bio
-        
         self.referralCode = referralCode
 
-        self.followersCount = followersCount
-        self.followingCount = followingCount
         self.privacyType = privacyType
-        
         self.isBanned = isBanned
         self.isActive = isActive
         self.isVerified = isVerified
@@ -105,6 +66,14 @@ struct User: Codable {
         self.createdAt = createdAt
         self.deletedAt = deletedAt
         self.updatedAt = updatedAt
+        
+        self.followersCount = followersCount
+        self.followingCount = followingCount
+        self.likesCount = likesCount
+        self.videoCount = videoCount
+        self.refersCount = refersCount
+        self.blockedCount = blockedCount
+        self.viewsCount = viewsCount
     }
 
     init(with data: [String: Any]?) {
@@ -113,20 +82,15 @@ struct User: Codable {
         self.username = data?["username"] as? String ?? emptyStr
         self.firstName = data?["f_name"] as? String ?? emptyStr
         self.lastName = data?["l_name"] as? String ?? emptyStr
-        self.fullName = data?["fullName"] as? String ?? emptyStr
         self.email = data?["email"] as? String ?? emptyStr
         self.phoneNumber = data?["phone_number"] as? String ?? emptyStr
         self.bio = data?["bio"] as? String ?? emptyStr
         self.gender = data?["gender"] as? Int ?? zero
         self.profilePhoto = data?["profile_photo"] as? String ?? emptyStr
         self.dob = data?["date_of_birth"] as? String ?? emptyStr
-
         self.referralCode = data?["referral_code"] as? String ?? emptyStr
-        
-        self.followersCount = data?["followers_count"] as? Int ?? zero
-        self.followingCount = data?["following_count"] as? Int ?? zero
+
         self.privacyType = data?["privacy_type"] as? Int ?? zero
-        
         self.isActive = data?["is_active"] as? Int ?? zero
         self.isBanned = data?["is_banned"] as? Bool ?? false
         self.isVerified = data?["is_verified"] as? Bool ?? false
@@ -134,10 +98,86 @@ struct User: Codable {
 
         self.updatedAt = data?["updated_at"] as? String ?? emptyStr
         self.createdAt = data?["created_at"] as? String ?? emptyStr
-        self.deletedAt = data?["deletedAt"] as? String ?? emptyStr
+        self.deletedAt = data?["deletedAtP"] as? String ?? emptyStr
         
+        self.followersCount = data?["followers_count"] as? Int ?? zero
+        self.followingCount = data?["following_count"] as? Int ?? zero
+        
+        self.blockedCount = data?["blocked_me_count"] as? Int ?? zero
+        self.likesCount = data?["likes_count"] as? Int ?? zero
+        self.refersCount = data?["user_prefer_count"] as? Int ?? zero
+        self.videoCount = data?["video_count"] as? Int ?? zero
+        self.viewsCount = data?["profile_views"] as? Int ?? zero
+    }
+
+    func toAnyObject() -> Any {
+        var dict = [String: Any]()
+        
+        dict["id"] = userId ?? emptyStr
+        dict["username"] = username ?? emptyStr
+        dict["f_name"] = firstName ?? emptyStr
+        dict["l_name"] = lastName ?? emptyStr
+        dict["email"] = email ?? emptyStr
+        dict["phone_number"] = phoneNumber ?? emptyStr
+        dict["bio"] = bio ?? emptyStr
+        dict["gender"] = gender ?? zero
+        dict["date_of_birth"] = dob ?? emptyStr
+        dict["referral_code"] = referralCode ?? emptyStr
+        dict["profile_photo"] = profilePhoto ?? emptyStr
+
+        dict["privacy_type"] = privacyType ?? zero
+        dict["is_active"] = isActive ?? zero
+        dict["is_banned"] = isBanned ?? false
+        dict["is_verified"] = isVerified ?? false
+        dict["isDeleted"] = isDeleted ?? false
+
+        dict["updated_at"] = updatedAt ?? emptyStr
+        dict["created_at"] = createdAt ?? emptyStr
+        dict["deletedAtP"] = deletedAt ?? emptyStr
+        
+        dict["followers_count"] = followersCount ?? zero
+        dict["following_count"] = followingCount ?? zero
+        
+        dict["blocked_me_count"] = blockedCount ?? zero
+        dict["likes_count"] = likesCount ?? zero
+        dict["user_prefer_count"] = refersCount ?? zero
+        dict["video_count"] = videoCount ?? zero
+        dict["profile_views"] = viewsCount ?? zero
+
+        return dict
+        
+//        return [
+//            "id" : userId ?? emptyStr,
+//            "username" : username ?? emptyStr,
+//            "f_name" : firstName ?? emptyStr,
+//            "l_name" : lastName ?? emptyStr,
+//            "email" : email ?? emptyStr,
+//            "phone_number" : phoneNumber ?? emptyStr,
+//            "bio" : bio ?? emptyStr,
+//            "gender" : gender ?? zero,
+//            "profile_photo" : profilePhoto ?? emptyStr,
+//            "date_of_birth" : dob ?? emptyStr,
+//            "referral_code" : referralCode ?? emptyStr,
+//            "updated_at" : updatedAt ?? emptyStr,
+//            "created_at" : createdAt ?? emptyStr,
+//            "deletedAtP" : blockedCount ?? emptyStr,
+//            "is_banned" : isBanned ?? false,
+//            "is_verified" : isVerified ?? false,
+//            "isDeleted" : isDeleted ?? false,
+//            "followers_count" : followersCount ?? zero,
+//            "following_count" : followingCount ?? zero,
+//            "privacy_type" : privacyType ?? zero,
+//            "is_active" : isActive ?? zero,
+//            "blocked_me_count" : blockedCount ?? zero,
+//            "likes_count" : likesCount ?? zero,
+//            "user_prefer_count" : refersCount ?? zero,
+//            "video_count" : videoCount ?? zero,
+//        ]
     }
     
+
+//
+//
 //    init(json:JSON){
 //        self.userId = json["userId"].stringValue
 //        self.username = json["username"].stringValue
@@ -155,34 +195,34 @@ struct User: Codable {
 //        self.isPhoneVerified = json["isPhoneVerified"].boolValue
 //    }
     
-    func toAnyObject() -> Any {
-        
-        return [
-            "id" : userId ?? emptyStr,
-            "username": username ?? emptyStr,
-            "f_name": firstName ?? emptyStr,
-            "l_name": lastName ?? emptyStr,
-            "fullName": fullName ?? emptyStr,
-            "email": email ?? emptyStr,
-            "phone_number": phoneNumber ?? emptyStr,
-            "date_of_birth": dob ?? emptyStr,
-            "gender": gender ?? zero,
-            "bio": bio ?? emptyStr,
-            "profile_photo": profilePhoto ?? emptyStr,
-            "referral_code": referralCode ?? emptyStr,
-            "following_count": followingCount ?? zero,
-        ]
-    }
+//    func toAnyObject() -> Any {
+//
+//        return [
+//            "id" : userId ?? emptyStr,
+//            "username": username ?? emptyStr,
+//            "f_name": firstName ?? emptyStr,
+//            "l_name": lastName ?? emptyStr,
+//            "fullname": fullName ?? emptyStr,
+//            "email": email ?? emptyStr,
+//            "phone_number": phoneNumber ?? emptyStr,
+//            "date_of_birth": dob ?? emptyStr,
+//            "gender": gender ?? zero,
+//            "bio": bio ?? emptyStr,
+//            "profile_photo": profilePhoto ?? emptyStr,
+//            "referral_code": referralCode ?? emptyStr,
+//            "following_count": followingCount ?? zero,
+////            "followers_count": followingCount ?? zero,
+////            "privacy_type": privacyType ?? zero,
+////            "video_count": videoCount ?? zero
+//
+//            
+//        ]
+//    }
     
-//    "followers_count": followersCount ?? zero,
-//    "privacy_type": privacyType ?? zero,
-//    "is_active": isActive ?? zero,
-//    "is_banned": isBanned ?? false,
-//    "is_verified": isVerified ?? false,
-//    "isDeleted": isDeleted ?? false,
-//    "updated_at": updatedAt ?? emptyStr,
-//    "created_at": createdAt ?? emptyStr,
-//    "deletedAt": deletedAt ?? emptyStr,
+//    
+//    func toAnyObject() -> [String:Any]{
+//        
+//    }
 
 }
 

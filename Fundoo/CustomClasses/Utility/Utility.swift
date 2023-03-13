@@ -630,7 +630,7 @@ class Utility: NSObject {
         if isConnectedToNetwork() {
             onlineTimer.invalidate()
             let TapPage = TabViewController()
-            TapPage.presentingPageWithIndex(indexedValue: 0)
+//            TapPage.presentingPageWithIndex(indexedValue: 0)
             UIApplication.shared.windows.first?.rootViewController = TapPage
            UIApplication.shared.windows.first?.makeKeyAndVisible()
 //            API.shared.fetchData(apiType: .foryou, offset: 0, completion: {

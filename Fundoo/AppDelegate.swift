@@ -574,36 +574,36 @@ var isNewUser = false
     
     func redirectToSingleVideoPage(videoID video_id: String, isFrom:String) {
         if UserModel.shared.profileStatus() != nil {
-            let viewController = ShowAllViewController()
-            viewController.removeStoryData = { [weak self] videoID in
-                
-            }
-            viewController.isFromNotification = true
-            viewController.videoID = video_id
-            if isFrom != "" {
-                viewController.isFromComment = true
-            }
-            if let vc = self.window?.visibleViewController() {
-                if let viewController = vc as? ShowAllViewController {
-                    viewController.isFromNotification = true
-                    viewController.videoID = video_id
-                    viewController.getData(offset: 0)
-                }
-                else {
-                    if let viewController = vc as? StoryFeedVC {
-                        DispatchQueue.main.async {
-                            viewController.isPlayVideo = false
-                            viewController.stopAllPlayer()
-                        }
-                    }
-                    self.window?.rootViewController!.present(viewController, animated: true, completion: nil)
-                }
-            }
-            else {
-                window = UIWindow(frame: UIScreen.main.bounds)
-                window?.makeKeyAndVisible()
-                window?.rootViewController = viewController
-            }
+//            let viewController = ShowAllViewController()
+//            viewController.removeStoryData = { [weak self] videoID in
+//                
+//            }
+//            viewController.isFromNotification = true
+//            viewController.videoID = video_id
+//            if isFrom != "" {
+//                viewController.isFromComment = true
+//            }
+//            if let vc = self.window?.visibleViewController() {
+//                if let viewController = vc as? ShowAllViewController {
+//                    viewController.isFromNotification = true
+//                    viewController.videoID = video_id
+//                    viewController.getData(offset: 0)
+//                }
+//                else {
+//                    if let viewController = vc as? StoryFeedVC {
+//                        DispatchQueue.main.async {
+//                            viewController.isPlayVideo = false
+//                            viewController.stopAllPlayer()
+//                        }
+//                    }
+//                    self.window?.rootViewController!.present(viewController, animated: true, completion: nil)
+//                }
+//            }
+//            else {
+//                window = UIWindow(frame: UIScreen.main.bounds)
+//                window?.makeKeyAndVisible()
+//                window?.rootViewController = viewController
+//            }
         }
         
     }
