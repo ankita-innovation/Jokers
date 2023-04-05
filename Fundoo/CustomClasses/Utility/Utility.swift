@@ -65,6 +65,29 @@ class Utility: NSObject {
         }
     }
 
+    func showToastMessage(message : String,viewController: UIViewController, originY: CGFloat = 0.0, height: CGFloat = 50) {
+
+        let toastLabel = UILabel(frame: CGRect(x: 0, y: 0, width: viewController.view.frame.size.width - 40, height: height))
+        toastLabel.center = viewController.view.center
+        toastLabel.frame.origin.y = originY == 0.0 ? viewController.view.frame.size.height - 160 : originY
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(1.0)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.numberOfLines = 0
+        toastLabel.font = liteReg
+        toastLabel.text = Utility().getAppLanguage()?.value(forKey: message) as? String
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = toastLabel.frame.size.height / 2;
+        toastLabel.clipsToBounds  =  true
+        viewController.view.addSubview(toastLabel)
+        viewController.view.bringSubviewToFront(toastLabel)
+        UIView.animate(withDuration: originY == 0.0 ? 4.0 : 6.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    }
+
     //MARK: Get Random like heart color
     func likeHexColorCode() -> String {
         let likeColorArray = ["#05ac90","#ac5b05","#ac1905","#8305ac","#ac0577","#0563ac","#7bac05"]
@@ -406,7 +429,6 @@ class Utility: NSObject {
         }
     }
 
-
     //get current utc time
     func getUTCTime() -> String {
         let date = Date()
@@ -416,11 +438,13 @@ class Utility: NSObject {
         let utcTimeZoneStr = formatter.string(from: date)
         return utcTimeZoneStr
     }
+    
     //get random id
     func randomID()-> String  {
         let timestamp = NSDate().timeIntervalSince1970
         return "\(UserModel.shared.userID()!)\(String(format: "%.0f", timestamp.rounded()))"
     }
+    
     func newID()-> String  {
         let timestamp = NSDate().timeIntervalSince1970
         return "\(UserModel.shared.userID()!)234324SFSD\(String(format: "%.0f", timestamp.rounded()))"
@@ -1174,29 +1198,6 @@ extension Utility{
             task.resume()
         }
         
-    }
-    //MARK: -Show Toast
-    func showToastMessage(message : String,viewController: UIViewController, originY: CGFloat = 0.0, height: CGFloat = 50) {
-
-        let toastLabel = UILabel(frame: CGRect(x: 0, y: 0, width: viewController.view.frame.size.width - 40, height: height))
-        toastLabel.center = viewController.view.center
-        toastLabel.frame.origin.y = originY == 0.0 ? viewController.view.frame.size.height - 160 : originY
-        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(1.0)
-        toastLabel.textColor = UIColor.white
-        toastLabel.textAlignment = .center;
-        toastLabel.numberOfLines = 0
-        toastLabel.font = liteReg
-        toastLabel.text = Utility().getAppLanguage()?.value(forKey: message) as? String
-        toastLabel.alpha = 1.0
-        toastLabel.layer.cornerRadius = toastLabel.frame.size.height / 2;
-        toastLabel.clipsToBounds  =  true
-        viewController.view.addSubview(toastLabel)
-        viewController.view.bringSubviewToFront(toastLabel)
-        UIView.animate(withDuration: originY == 0.0 ? 4.0 : 6.0, delay: 0.1, options: .curveEaseOut, animations: {
-            toastLabel.alpha = 0.0
-        }, completion: {(isCompleted) in
-            toastLabel.removeFromSuperview()
-        })
     }
 
 

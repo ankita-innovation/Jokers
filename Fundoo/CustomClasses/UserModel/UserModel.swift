@@ -86,7 +86,7 @@ struct User: Codable {
         self.phoneNumber = data?["phone_number"] as? String ?? emptyStr
         self.bio = data?["bio"] as? String ?? emptyStr
         self.gender = data?["gender"] as? Int ?? zero
-        self.profilePhoto = data?["profile_photo"] as? String ?? emptyStr
+        self.profilePhoto = data?["profile_photo_path"] as? String ?? emptyStr
         self.dob = data?["date_of_birth"] as? String ?? emptyStr
         self.referralCode = data?["referral_code"] as? String ?? emptyStr
 
@@ -123,7 +123,7 @@ struct User: Codable {
         dict["gender"] = gender ?? zero
         dict["date_of_birth"] = dob ?? emptyStr
         dict["referral_code"] = referralCode ?? emptyStr
-        dict["profile_photo"] = profilePhoto ?? emptyStr
+        dict["profile_photo_path"] = profilePhoto ?? emptyStr
 
         dict["privacy_type"] = privacyType ?? zero
         dict["is_active"] = isActive ?? zero
