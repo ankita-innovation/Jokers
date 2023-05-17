@@ -23,7 +23,6 @@ class HSChatSocket {
         let socketURL = URL.init(string: "\(WEB_SOCKET_CHAT_URL)\(UserModel.shared.userID()!)")
         chatSocket = SRWebSocket.init(url: socketURL)
         chatSocket.open()
-      
     }
     
     func disconnect()  {
@@ -33,7 +32,7 @@ class HSChatSocket {
     
     //update user live status
     func makeAlive()  {
-        print("make live")
+//        print("make live")
         if Utility.shared.isConnectedToNetwork() {
             
             if isSocketConnected && chatSocket.readyState.rawValue == 1{

@@ -73,6 +73,7 @@ extension UIViewController{
         self.view.addSubview(transitionBtn)
         return transitionBtn
     }
+    
     //check if socket is chat socket or random socket
     func isChat(socket:String) -> Bool {
         let chatSocket = "\(WEB_SOCKET_CHAT_URL)\(UserModel.shared.userID()!)"
